@@ -10,7 +10,7 @@ The scale utilises a 3D-printed compliant mechanism. Finite Element Analysis (FE
 
 | Physical Assembly | FEA Stress Analysis |
 | :---: | :---: |
-| ![Assembly](Images/assembly.jpg) | ![FEA](Images/fea_stress.jpg) |
+| <img src="Images/assembly.jpg" width="400"> | <img src="Images/fea_stress.jpg" width="400"> |
 
 ---
 
@@ -19,7 +19,7 @@ The system tracks planar displacements via high-contrast markers. The custom MAT
 
 | Tracking Markers | MATLAB GUI Interface |
 | :---: | :---: |
-| ![Markers](Images/markers.jpg) | ![GUI](Images/gui_screengrab.png) |
+| <img src="Images/markers.jpg" width="400"> | <img src="Images/gui_screengrab.png" width="400"> |
 
 ---
 
@@ -28,7 +28,7 @@ Using Multiple Linear Regression (MLR) on 99 physical test samples, the system g
 
 | Eccentric Load Testing | Actual vs. Predicted Performance |
 | :---: | :---: |
-| ![Weights](Images/eccentric_weights.jpg) | ![Graph](Images/validation_graph.png) |
+| <img src="Images/eccentric_weights.jpg" width="400"> | <img src="Images/validation_graph.png" width="400"> |
 
 ---
 
