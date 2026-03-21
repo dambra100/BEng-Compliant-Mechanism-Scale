@@ -1,19 +1,47 @@
-# BEng Dissertation: Low-Cost Portable Scale via Image Processing
+# Low-Cost Compliant Mechanism Scale: Optical Force Tracking
 
 ## Overview
-This repository contains the final report, models, and MATLAB scripts for my First-Class Mechanical Engineering dissertation at Brunel University London. The project successfully developed a conceptual low-cost, portable scale integrated into a smartphone case, utilising computer vision to estimate applied forces. 
+This repository contains the software architecture, CAD, and datasets for my BEng Mechanical Engineering Dissertation. The project explores replacing expensive mechanical load cells with low-cost optical tracking using a standard webcam, compliant mechanisms, and image processing.
 
-The methodology and findings from this project were peer-reviewed and published in the *IEEE Sensors Letters* (August 2023).
+---
 
-## Core Architecture & Hardware
-* **Compliant Mechanism:** Engineered a 3D-printed platform manufactured from ABS. The design features four deformable cantilever beams that act as the primary sensing structure.
-* **Vision System:** Integrated a webcam to simulate a smartphone camera, positioned to capture real-time spatial variations of four distinct white markers against a black surface as external loads are applied.
+## 1. Design & Simulation
+The scale utilises a 3D-printed compliant mechanism. Finite Element Analysis (FEA) was conducted to ensure the flexure legs operated within the elastic region of the PLA material, ensuring repeatability and preventing yielding.
 
-## Data Processing & Methodology
-1. **Image Processing Pipeline:** Utilised the MATLAB Image Processing Toolbox to capture real-time frames. Applied Gaussian filters for noise reduction, and converted the feed from RGB to grayscale, and subsequently to binary images.
-2. **Feature Extraction:** Isolated regions of interest (ROI) to continuously calculate two key parameters: the total number of white pixels per marker, and their centroid positions relative to the image centre.
-3. **Sensor Calibration:** Implemented Multiple Linear Regression (MLR) to compute a calibration matrix, translating raw pixel displacement data into physical force estimations.
+| Physical Assembly | FEA Stress Analysis |
+| :---: | :---: |
+| ![Assembly](Images/assembly.jpg) | ![FEA](Images/fea_stress.jpg) |
 
-## Key Findings
-* Successfully validated the core sensing principle of using a compliant mechanism and image processing for weight measurement.
-* Proposed an optimised future architecture adopting stiffer materials and high-resolution smartphone cameras to heavily miniaturise the physical footprint whilst improving measurement precision.
+---
+
+## 2. Optical Tracking & GUI
+The system tracks planar displacements via high-contrast markers. The custom MATLAB GUI (`gui.m`) segments the live feed into four quadrants to calculate 12 state variables (pixel areas and centroid X/Y coordinates).
+
+| Tracking Markers | MATLAB GUI Interface |
+| :---: | :---: |
+| ![Markers](Images/markers.jpg) | ![GUI](Images/gui_screengrab.png) |
+
+---
+
+## 3. Mathematical Validation
+Using Multiple Linear Regression (MLR) on 99 physical test samples, the system generates a $3 \times 12$ calibration matrix. This allows the scale to calculate absolute mass ($F_z$) while isolating bending moments ($M_x, M_y$) caused by off-centre loads.
+
+| Eccentric Load Testing | Actual vs. Predicted Performance |
+| :---: | :---: |
+| ![Weights](Images/eccentric_weights.jpg) | ![Graph](Images/validation_graph.png) |
+
+---
+
+## 4. Documentation & Publications
+This project was developed with high academic and scientific rigour, resulting in a full undergraduate dissertation and a drafted publication for *IEEE Sensors Letters*.
+
+* 📄 **[IEEE Sensors Letters Publication](Documents/ieee_sensors_publication.pdf)**: A condensed, technical paper detailing the mathematical calibration and optical methodology.
+* 📄 **[BEng Final Dissertation Report](Documents/final_dissertation_report.pdf)**: The complete 60+ page technical report covering the literature review, concept generation, FEA optimisation, and system validation.
+
+---
+
+## Repository Structure
+* `/Scripts/` - Core MATLAB code.
+* `/CAD/` - Manufacturing `.stl` and design `.step` files.
+* `/Documents/` - Academic reports and publications.
+* `ALL_IN_ONE.xlsx` - Raw 99-sample calibration dataset.
