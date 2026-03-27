@@ -1,9 +1,3 @@
-### 2. The Compliant Mechanism Scale (The Deep Tech Flex)
-*For this one, I have structured it to highlight the massive intersection of hardware, mathematics, and software. It shows you aren't just a coder; you understand complex physics.*
-
-**Copy and paste this into your Scale `README.md`:**
-
-```markdown
 # Optical Force Tracking: Compliant Mechanism Scale
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=for-the-badge&logo=mathworks&logoColor=white)
@@ -36,7 +30,12 @@ Using Multiple Linear Regression (MLR) trained on 99 physical test samples, the 
 * `ALL_IN_ONE.xlsx` - The raw 99-sample calibration and validation dataset.
 
 ## 🖼️ Visualisation
-*(Add your images here using this format: `![Alt Text](path/to/image.png)`)*
-* **Image 1:** Physical Assembly vs. FEA Stress Analysis
-* **Image 2:** MATLAB GUI Interface & Tracking Markers
-* **Image 3:** Actual vs. Predicted Performance Graph
+
+### Physical Assembly & FEA Stress Analysis
+![FEA Analysis](fea.png)
+
+### MATLAB GUI Interface & Optical Tracking
+![MATLAB GUI](gui.png)
+
+### Mathematical Calibration: Actual vs. Predicted Performance
+![Performance Graph](graph.png)
