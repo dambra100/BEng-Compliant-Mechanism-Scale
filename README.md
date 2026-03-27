@@ -1,7 +1,7 @@
 # Optical Force Tracking: Compliant Mechanism Scale
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=for-the-badge&logo=mathworks&logoColor=white)
-![SolidWorks](https://img.shields.io/badge/CAD-SolidWorks-blue?style=for-the-badge)
+![Fusion 360](https://img.shields.io/badge/CAD-Fusion%20360-F05A28?style=for-the-badge&logo=autodesk&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Published-success?style=for-the-badge)
 
 This repository contains the software architecture, CAD, and raw datasets for a low-cost optical tracking scale. The system explores the replacement of expensive mechanical load cells with compliant mechanisms and computer vision (tracking planar displacements via a standard webcam).
@@ -31,11 +31,20 @@ Using Multiple Linear Regression (MLR) trained on 99 physical test samples, the 
 
 ## 🖼️ Visualisation
 
-### Physical Assembly & FEA Stress Analysis
-![FEA Analysis](fea.png)
+### Physical Assembly
+<img src="Images/assembly.jpg" alt="Physical Assembly" width="500">
+
+### Optical Tracking Markers
+<img src="Images/markers.jpg" alt="Optical Tracking Markers" width="400">
+
+### Eccentric Load Testing
+<img src="Images/eccentric_weights.jpg" alt="Eccentric Weights Testing" width="600">
+
+### FEA Stress Analysis
+<img src="Images/fea_stress.jpg" alt="FEA Analysis" width="500">
 
 ### MATLAB GUI Interface & Optical Tracking
-![MATLAB GUI](gui.png)
+<img src="Images/gui_screengrab.png" alt="MATLAB GUI" width="600">
 
 ### Mathematical Calibration: Actual vs. Predicted Performance
-![Performance Graph](graph.png)
+<img src="Images/validation_graph.png" alt="Performance Graph" width="600">
