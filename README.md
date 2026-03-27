@@ -1,47 +1,42 @@
-# Low-Cost Compliant Mechanism Scale: Optical Force Tracking
+### 2. The Compliant Mechanism Scale (The Deep Tech Flex)
+*For this one, I have structured it to highlight the massive intersection of hardware, mathematics, and software. It shows you aren't just a coder; you understand complex physics.*
 
-## Overview
-This repository contains the software architecture, CAD, and datasets for my BEng Mechanical Engineering Dissertation. The project explores replacing expensive mechanical load cells with low-cost optical tracking using a standard webcam, compliant mechanisms, and image processing.
+**Copy and paste this into your Scale `README.md`:**
 
----
+```markdown
+# Optical Force Tracking: Compliant Mechanism Scale
 
-## 1. Design & Simulation
-The scale utilises a 3D-printed compliant mechanism. Finite Element Analysis (FEA) was conducted to ensure the flexure legs operated within the elastic region of the PLA material, ensuring repeatability and preventing yielding.
+![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=for-the-badge&logo=mathworks&logoColor=white)
+![SolidWorks](https://img.shields.io/badge/CAD-SolidWorks-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Published-success?style=for-the-badge)
 
-| Physical Assembly | FEA Stress Analysis |
-| :---: | :---: |
-| <img src="Images/assembly.jpg" width="400"> | <img src="Images/fea_stress.jpg" width="400"> |
+This repository contains the software architecture, CAD, and raw datasets for a low-cost optical tracking scale. The system explores the replacement of expensive mechanical load cells with compliant mechanisms and computer vision (tracking planar displacements via a standard webcam).
 
----
+**📄 Read the drafted publication for IEEE Sensors Letters in the `/Documents` directory.**
 
-## 2. Optical Tracking & GUI
-The system tracks planar displacements via high-contrast markers. The custom MATLAB GUI (`gui.m`) segments the live feed into four quadrants to calculate 12 state variables (pixel areas and centroid X/Y coordinates).
+## 🔬 Core Technologies
 
-| Tracking Markers | MATLAB GUI Interface |
-| :---: | :---: |
-| <img src="Images/markers.jpg" width="400"> | <img src="Images/gui_screengrab.png" width="400"> |
+### 1. Mechanical Design & FEA
+The scale utilises a custom 3D-printed compliant mechanism. Extensive Finite Element Analysis (FEA) was conducted to ensure the flexure legs operate strictly within the elastic region of the PLA material, guaranteeing repeatability and preventing mechanical yielding under load.
 
----
+### 2. Optical Tracking & GUI (MATLAB)
+The system tracks physical planar displacements using high-contrast optical markers. 
+* A custom MATLAB GUI (`gui.m`) segments the live video feed into four distinct quadrants.
+* The software calculates 12 real-time state variables (pixel areas and centroid X/Y coordinates) to track micro-deformations in the compliant structure.
 
-## 3. Mathematical Validation
-Using Multiple Linear Regression (MLR) on 99 physical test samples, the system generates a $3 \times 12$ calibration matrix. This allows the scale to calculate absolute mass ($F_z$) while isolating bending moments ($M_x, M_y$) caused by off-centre loads.
+### 3. Mathematical Calibration (Machine Learning)
+Using Multiple Linear Regression (MLR) trained on 99 physical test samples, the system generates a `3×12` calibration matrix. 
+* **Result:** The software successfully calculates absolute mass ($F_z$) while mathematically isolating and ignoring bending moments ($M_x, M_y$) caused by off-centre, eccentric loads.
 
-| Eccentric Load Testing | Actual vs. Predicted Performance |
-| :---: | :---: |
-| <img src="Images/eccentric_weights.jpg" width="400"> | <img src="Images/validation_graph.png" width="400"> |
+## 📁 Repository Structure
 
----
-
-## 4. Documentation & Publications
-This project was developed with high academic and scientific rigour, resulting in a full undergraduate dissertation and a drafted publication for *IEEE Sensors Letters*.
-
-* 📄 **[IEEE Sensors Letters Publication](Documents/ieee_sensors_publication.pdf)**: A condensed, technical paper detailing the mathematical calibration and optical methodology.
-* 📄 **[BEng Final Dissertation Report](Documents/final_dissertation_report.pdf)**: The complete 60+ page technical report covering the literature review, concept generation, FEA optimisation, and system validation.
-
----
-
-## Repository Structure
-* `/Scripts/` - Core MATLAB code.
+* `/Scripts/` - Core MATLAB computer vision and regression code.
 * `/CAD/` - Manufacturing `.stl` and design `.step` files.
-* `/Documents/` - Academic reports and publications.
-* `ALL_IN_ONE.xlsx` - Raw 99-sample calibration dataset.
+* `/Documents/` - Academic reports, FEA analysis, and the IEEE Sensors Letters publication draft.
+* `ALL_IN_ONE.xlsx` - The raw 99-sample calibration and validation dataset.
+
+## 🖼️ Visualisation
+*(Add your images here using this format: `![Alt Text](path/to/image.png)`)*
+* **Image 1:** Physical Assembly vs. FEA Stress Analysis
+* **Image 2:** MATLAB GUI Interface & Tracking Markers
+* **Image 3:** Actual vs. Predicted Performance Graph
