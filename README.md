@@ -30,10 +30,12 @@ Using Multiple Linear Regression (MLR) trained on 99 physical test samples, the 
 
 ## 📁 Repository Structure
 
-* `/Scripts/` - Core MATLAB computer vision and regression code.
-* `/CAD/` - Manufacturing `.stl` and design `.step` files.
-* `/Documents/` - Academic reports, FEA analysis, and the IEEE Sensors Letters publication draft.
+* `/CAD/` - Iterative design files (`.step`) and final 3D printing meshes (`.stl`).
+* `/Documents/` - Final BEng dissertation report and the IEEE Sensors Letters publication draft.
+* `/Images/` - Visual assets for physical assembly, FEA modelling, and GUI demonstration.
+* `/Scripts/` - Core MATLAB optical tracking (`gui.m`), machine learning calibration, and plotting scripts.
 * `ALL_IN_ONE.xlsx` - The raw 99-sample calibration and validation dataset.
+* `README.md` - Project documentation.
 
 ## 📊 Execution & Results
 
