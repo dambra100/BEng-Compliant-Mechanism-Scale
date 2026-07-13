@@ -76,10 +76,10 @@ while isvalid(fig)
     props3 = regionprops(section3, 'Centroid');
     props4 = regionprops(section4, 'Centroid');
 
-    centroid1 = ifelse(~isempty(props1), props1(1).Centroid, [NaN NaN]);
-    centroid2 = ifelse(~isempty(props2), props2(1).Centroid, [NaN NaN]);
-    centroid3 = ifelse(~isempty(props3), props3(1).Centroid, [NaN NaN]);
-    centroid4 = ifelse(~isempty(props4), props4(1).Centroid, [NaN NaN]);
+    centroid1 = get_centroid(props1);
+    centroid2 = get_centroid(props2);
+    centroid3 = get_centroid(props3);
+    centroid4 = get_centroid(props4);
 
     % Calculate displacement from absolute origin
     center = [w/2 h/2];
@@ -130,7 +130,7 @@ end
 clear cam;
 delete(fig);
 
-% Helper function for clean ternary logic
-function res = ifelse(cond, trueVal, falseVal)
-    if cond; res = trueVal; else; res = falseVal; end
+% Helper function
+function c = get_centroid(props)
+    if ~isempty(props); c = props(1).Centroid; else; c = [NaN NaN]; end
 end
