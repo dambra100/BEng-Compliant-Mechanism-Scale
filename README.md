@@ -1,6 +1,6 @@
 # Optical Force Tracking: Compliant Mechanism Scale
 
-![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=for-the-badge&logo=mathworks&logoColor=white)
+![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=for-the-badge)
 ![Fusion 360](https://img.shields.io/badge/CAD-Fusion%20360-F05A28?style=for-the-badge&logo=autodesk&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Published-success?style=for-the-badge)
 
