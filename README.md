@@ -2,11 +2,11 @@
 
 ![MATLAB](https://img.shields.io/badge/MATLAB-e16737?style=for-the-badge)
 ![Fusion 360](https://img.shields.io/badge/CAD-Fusion%20360-F05A28?style=for-the-badge&logo=autodesk&logoColor=white)
-![Status](https://img.shields.io/badge/Status-Published-success?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Preprint-blue?style=for-the-badge)
 
 This repository contains the software architecture, CAD, and raw datasets for a low-cost optical tracking scale. The system explores the replacement of expensive mechanical load cells with compliant mechanisms and computer vision (tracking planar displacements via a standard webcam).
 
-**📄 Read the drafted publication for IEEE Sensors Letters in the `/Documents` directory.**
+**📄 Submitted for peer review to IEEE Sensors Letters; not accepted for publication. A preprint is publicly available on TechRxiv (August 2023). The submitted manuscript is also included in the `/Documents` directory.**
 
 ## 🔬 Core Technologies
 
@@ -31,7 +31,7 @@ Using Multiple Linear Regression (MLR) trained on 99 physical test samples, the 
 ## 📁 Repository Structure
 
 * `/CAD/` - Iterative design files (`.step`) and final 3D printing meshes (`.stl`).
-* `/Documents/` - Final BEng dissertation report and the IEEE Sensors Letters publication draft.
+* `/Documents/` - Final BEng dissertation report and the IEEE Sensors Letters submission manuscript (not accepted for publication; preprint available on TechRxiv).
 * `/Images/` - Visual assets for physical assembly, FEA modelling, and GUI demonstration.
 * `/Scripts/` - Core MATLAB optical tracking (`gui.m`), machine learning calibration, and plotting scripts.
 * `ALL_IN_ONE.xlsx` - The raw 99-sample calibration and validation dataset.
